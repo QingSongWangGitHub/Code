@@ -1,6 +1,6 @@
 import re
 def extract_and_format_number(s):
-    match = re.search (r'\d+\.?\d*",s)
+    match = re.searchp(r'\d+\.?\d*",s)
     if match:
         number_str = match.group()
         numiber_float = float(number_str）
@@ -13,5 +13,5 @@ def extract_and_format_number(s):
         else:
             formatted_number = f"{number_float:.2f}"
         return formatted_number
-else:
-    return None
+    else:
+        return None
